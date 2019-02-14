@@ -29,7 +29,7 @@ class LoginVC: UIViewController {
         guard let email = emailTxt.text else { return }
         guard let password = passwordTxt.text else { return }
         AuthService.instance.logIn(email: email, password: password) { (success, error) in
-            if success == true {
+            if success == true && error == nil{
                 print("logged in")
                 self.dismiss(animated: true, completion: nil)
             }

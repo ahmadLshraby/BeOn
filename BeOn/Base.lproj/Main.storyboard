@@ -103,7 +103,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06W-Ox-YY9">
-                                <rect key="frame" x="140" y="795.5" width="58" height="43"/>
+                                <rect key="frame" x="140" y="765.5" width="58" height="43"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,21 +113,21 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xoM-Q7-21v" customClass="CircleImage" customModule="BeOn" customModuleProvider="target">
-                                <rect key="frame" x="20" y="772" width="90" height="90"/>
+                                <rect key="frame" x="20" y="742" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="5dX-ud-wqa"/>
                                     <constraint firstAttribute="height" constant="90" id="ouJ-Ml-Xnf"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-sA-qoD">
-                                <rect key="frame" x="0.0" y="161" width="414" height="591"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-sA-qoD">
+                                <rect key="frame" x="0.0" y="161" width="414" height="551"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CUP-7w-ows">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CUP-7w-ows" id="xW6-Gw-Fda">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKV-kU-VyG">
@@ -160,7 +160,7 @@
                             <constraint firstItem="06W-Ox-YY9" firstAttribute="centerY" secondItem="xoM-Q7-21v" secondAttribute="centerY" id="BMS-Ec-vDY"/>
                             <constraint firstItem="jmC-vW-aP0" firstAttribute="centerY" secondItem="0AY-KF-FOv" secondAttribute="centerY" id="EqI-PR-dH6"/>
                             <constraint firstItem="Coc-IR-wCQ" firstAttribute="top" secondItem="UZn-tR-xTv" secondAttribute="top" constant="25" id="GLh-SS-1WH"/>
-                            <constraint firstItem="xoM-Q7-21v" firstAttribute="bottom" secondItem="UZn-tR-xTv" secondAttribute="bottom" id="MBy-KX-JcT"/>
+                            <constraint firstItem="xoM-Q7-21v" firstAttribute="bottom" secondItem="UZn-tR-xTv" secondAttribute="bottom" constant="-30" id="MBy-KX-JcT"/>
                             <constraint firstItem="UZn-tR-xTv" firstAttribute="trailing" secondItem="jmC-vW-aP0" secondAttribute="trailing" constant="80" id="OmW-97-V6Q"/>
                             <constraint firstItem="fjB-sA-qoD" firstAttribute="leading" secondItem="UZn-tR-xTv" secondAttribute="leading" id="SnH-Ay-JQ4"/>
                             <constraint firstItem="UZn-tR-xTv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Coc-IR-wCQ" secondAttribute="trailing" symbolic="YES" id="SxS-Ek-4hM"/>
@@ -170,7 +170,7 @@
                             <constraint firstItem="0AY-KF-FOv" firstAttribute="leading" secondItem="UZn-tR-xTv" secondAttribute="leading" constant="20" id="VJz-G1-aDt"/>
                             <constraint firstItem="06W-Ox-YY9" firstAttribute="leading" secondItem="xoM-Q7-21v" secondAttribute="trailing" constant="30" id="Yrp-Tc-3QJ"/>
                             <constraint firstItem="jmC-vW-aP0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0AY-KF-FOv" secondAttribute="trailing" constant="8" symbolic="YES" id="n8z-Nd-PTw"/>
-                            <constraint firstItem="xoM-Q7-21v" firstAttribute="top" secondItem="fjB-sA-qoD" secondAttribute="bottom" constant="20" id="s1z-xJ-2Rv"/>
+                            <constraint firstItem="xoM-Q7-21v" firstAttribute="top" secondItem="fjB-sA-qoD" secondAttribute="bottom" constant="30" id="s1z-xJ-2Rv"/>
                             <constraint firstItem="UZn-tR-xTv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="06W-Ox-YY9" secondAttribute="trailing" symbolic="YES" id="w36-Xx-idd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UZn-tR-xTv"/>

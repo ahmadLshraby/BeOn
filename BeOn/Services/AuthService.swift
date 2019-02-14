@@ -29,9 +29,17 @@ class AuthService {
             defaults.set(newValue, forKey: USER_EMAIL)
         }
     }
+    var password: String {
+        get {
+            return defaults.value(forKey: pass) as! String
+        }
+        set {
+            defaults.set(newValue, forKey: pass)
+        }
+    }
     
     
-    func register(email: String, password: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
+    func register(name: String, email: String, password: String, avatarName: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil {
                 completion(true, nil)
@@ -44,12 +52,15 @@ class AuthService {
     func logIn(email: String, password: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if error == nil {
+                self.userEmail = email
+                self.isLoggedIn = true
                 completion(true, nil)
             }else {
                 completion(false, error)
             }
         })
     }
+
     
     
     

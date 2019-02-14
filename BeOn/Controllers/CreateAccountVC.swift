@@ -15,6 +15,8 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     
+    var avatarName = "profileDefault"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,12 +29,14 @@ class CreateAccountVC: UIViewController {
     @IBAction func createAccountBtn(_ sender: UIButton) {
         guard let email = userEmailTxt.text else { return }
         guard let password = passwordTxt.text else { return }
+        guard let name = userNameTxt.text else { return }
+        
 
-        AuthService.instance.register(email: email, password: password) { (success, error) in
-            if success == true {
+        AuthService.instance.register(name: name,email: email, password: password, avatarName: avatarName) { (success, error) in
+            if success == true  && error == nil{
                 print("registered")
                 AuthService.instance.logIn(email: email, password: password, completion: { (success, error) in
-                    if success == true {
+                    if success == true && error == nil{
                         print("logged in")
                         self.performSegue(withIdentifier: unwindToChannel, sender: nil)
                     }
