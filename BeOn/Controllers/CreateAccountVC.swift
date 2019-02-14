@@ -1,5 +1,5 @@
 //
-//  LoginVC.swift
+//  CreateAccountVC.swift
 //  BeOn
 //
 //  Created by sHiKoOo on 2/14/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class CreateAccountVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +16,11 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func closeBtn(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func createAccountBtn(_ sender: UIButton) {
-        performSegue(withIdentifier: toCreateAccountVC, sender: nil)
+        performSegue(withIdentifier: unwindToChannel, sender: nil)
     }
     
-    
-    
-    
+
+
     
     
     
