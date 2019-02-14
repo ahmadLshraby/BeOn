@@ -1,0 +1,6 @@
+framework module Pods_BeOn {
+  umbrella header "Pods-BeOn-umbrella.h"
+
+  export *
+  module * { export * }
+}

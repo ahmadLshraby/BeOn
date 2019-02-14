@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		04173ADB221547AB008C39A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ADA221547AB008C39A7 /* AppDelegate.swift */; };
-		04173ADD221547AB008C39A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ADC221547AB008C39A7 /* ViewController.swift */; };
 		04173AE0221547AB008C39A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04173ADE221547AB008C39A7 /* Main.storyboard */; };
 		04173AE2221547AE008C39A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04173AE1221547AE008C39A7 /* Assets.xcassets */; };
 		04173AE5221547AE008C39A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04173AE3221547AE008C39A7 /* LaunchScreen.storyboard */; };
+		04173AED221548F0008C39A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04173AEC221548F0008C39A7 /* GoogleService-Info.plist */; };
+		04173AF222155067008C39A7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04173AF022155067008C39A7 /* SWRevealViewController.m */; };
+		04173AF7221552C3008C39A7 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173AF6221552C3008C39A7 /* ChatVC.swift */; };
+		04173AF9221552D3008C39A7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173AF8221552D3008C39A7 /* ChannelVC.swift */; };
+		4A97000C90353D89FE067A3E /* Pods_BeOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04173AD7221547AB008C39A7 /* BeOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04173ADA221547AB008C39A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04173ADC221547AB008C39A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04173ADF221547AB008C39A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04173AE1221547AE008C39A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04173AE4221547AE008C39A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04173AE6221547AE008C39A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04173AEC221548F0008C39A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04173AEF22155065008C39A7 /* BeOn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeOn-Bridging-Header.h"; sourceTree = "<group>"; };
+		04173AF022155067008C39A7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		04173AF122155067008C39A7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		04173AF6221552C3008C39A7 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		04173AF8221552D3008C39A7 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		3C68E1FEC95B433BB6B47DD7 /* Pods-BeOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeOn/Pods-BeOn.debug.xcconfig"; sourceTree = "<group>"; };
+		87CA2BE672F4F1F9A89109F1 /* Pods-BeOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeOn/Pods-BeOn.release.xcconfig"; sourceTree = "<group>"; };
+		BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A97000C90353D89FE067A3E /* Pods_BeOn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				04173AD9221547AB008C39A7 /* BeOn */,
 				04173AD8221547AB008C39A7 /* Products */,
+				9481DF827233767D90B38361 /* Pods */,
+				7A8A51BBBD41447DEB9F08E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,68 @@
 		04173AD9221547AB008C39A7 /* BeOn */ = {
 			isa = PBXGroup;
 			children = (
+				04173AF522155295008C39A7 /* Model */,
+				04173AF422155287008C39A7 /* View */,
+				04173AF322155270008C39A7 /* Controllers */,
+				04173AEE22155043008C39A7 /* Supporting Files */,
 				04173ADA221547AB008C39A7 /* AppDelegate.swift */,
-				04173ADC221547AB008C39A7 /* ViewController.swift */,
 				04173ADE221547AB008C39A7 /* Main.storyboard */,
 				04173AE1221547AE008C39A7 /* Assets.xcassets */,
 				04173AE3221547AE008C39A7 /* LaunchScreen.storyboard */,
 				04173AE6221547AE008C39A7 /* Info.plist */,
+				04173AEC221548F0008C39A7 /* GoogleService-Info.plist */,
 			);
 			path = BeOn;
+			sourceTree = "<group>";
+		};
+		04173AEE22155043008C39A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04173AF122155067008C39A7 /* SWRevealViewController.h */,
+				04173AF022155067008C39A7 /* SWRevealViewController.m */,
+				04173AEF22155065008C39A7 /* BeOn-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04173AF322155270008C39A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04173AF6221552C3008C39A7 /* ChatVC.swift */,
+				04173AF8221552D3008C39A7 /* ChannelVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04173AF422155287008C39A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04173AF522155295008C39A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A8A51BBBD41447DEB9F08E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9481DF827233767D90B38361 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C68E1FEC95B433BB6B47DD7 /* Pods-BeOn.debug.xcconfig */,
+				87CA2BE672F4F1F9A89109F1 /* Pods-BeOn.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04173AE9221547AE008C39A7 /* Build configuration list for PBXNativeTarget "BeOn" */;
 			buildPhases = (
+				BBE9979419F17B695071C2FA /* [CP] Check Pods Manifest.lock */,
 				04173AD3221547AB008C39A7 /* Sources */,
 				04173AD4221547AB008C39A7 /* Frameworks */,
 				04173AD5221547AB008C39A7 /* Resources */,
+				257E0CD39E65CDFDA1171102 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +167,7 @@
 				TargetAttributes = {
 					04173AD6221547AB008C39A7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -123,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04173AE5221547AE008C39A7 /* LaunchScreen.storyboard in Resources */,
+				04173AED221548F0008C39A7 /* GoogleService-Info.plist in Resources */,
 				04173AE2221547AE008C39A7 /* Assets.xcassets in Resources */,
 				04173AE0221547AB008C39A7 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +203,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		257E0CD39E65CDFDA1171102 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BeOn/Pods-BeOn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeOn/Pods-BeOn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBE9979419F17B695071C2FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeOn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04173AD3221547AB008C39A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04173ADD221547AB008C39A7 /* ViewController.swift in Sources */,
+				04173AF9221552D3008C39A7 /* ChannelVC.swift in Sources */,
+				04173AF7221552C3008C39A7 /* ChatVC.swift in Sources */,
 				04173ADB221547AB008C39A7 /* AppDelegate.swift in Sources */,
+				04173AF222155067008C39A7 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,17 +400,22 @@
 		};
 		04173AEA221547AE008C39A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C68E1FEC95B433BB6B47DD7 /* Pods-BeOn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7S769X964;
 				INFOPLIST_FILE = BeOn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmadshraby.BeOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeOn/Supporting Files/BeOn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,17 +423,21 @@
 		};
 		04173AEB221547AE008C39A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87CA2BE672F4F1F9A89109F1 /* Pods-BeOn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7S769X964;
 				INFOPLIST_FILE = BeOn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmadshraby.BeOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeOn/Supporting Files/BeOn-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
