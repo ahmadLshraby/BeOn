@@ -12,3 +12,7 @@ import Foundation
 let toLoginVC = "toLogin"
 let toCreateAccountVC = "toCreateAccount"
 let unwindToChannel = "unwind"
+
+// User Defaults
+let loggedInKey = "loggedIn"
+let USER_EMAIL = "userEmail"

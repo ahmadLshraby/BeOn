@@ -10,6 +10,9 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,16 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: toCreateAccountVC, sender: nil)
     }
     
+    @IBAction func logInBtn(_ sender: UIButton) {
+        guard let email = emailTxt.text else { return }
+        guard let password = passwordTxt.text else { return }
+        AuthService.instance.logIn(email: email, password: password) { (success, error) in
+            if success == true {
+                print("logged in")
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
     
     
     
