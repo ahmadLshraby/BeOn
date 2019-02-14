@@ -15,6 +15,7 @@
 		04173AF222155067008C39A7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04173AF022155067008C39A7 /* SWRevealViewController.m */; };
 		04173AF7221552C3008C39A7 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173AF6221552C3008C39A7 /* ChatVC.swift */; };
 		04173AF9221552D3008C39A7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173AF8221552D3008C39A7 /* ChannelVC.swift */; };
+		04173AFB22155E8E008C39A7 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173AFA22155E8E008C39A7 /* GradientView.swift */; };
 		4A97000C90353D89FE067A3E /* Pods_BeOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		04173AF122155067008C39A7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		04173AF6221552C3008C39A7 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		04173AF8221552D3008C39A7 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		04173AFA22155E8E008C39A7 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3C68E1FEC95B433BB6B47DD7 /* Pods-BeOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeOn/Pods-BeOn.debug.xcconfig"; sourceTree = "<group>"; };
 		87CA2BE672F4F1F9A89109F1 /* Pods-BeOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeOn/Pods-BeOn.release.xcconfig"; sourceTree = "<group>"; };
 		BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,12 +71,12 @@
 		04173AD9221547AB008C39A7 /* BeOn */ = {
 			isa = PBXGroup;
 			children = (
+				04173ADA221547AB008C39A7 /* AppDelegate.swift */,
+				04173ADE221547AB008C39A7 /* Main.storyboard */,
 				04173AF522155295008C39A7 /* Model */,
 				04173AF422155287008C39A7 /* View */,
 				04173AF322155270008C39A7 /* Controllers */,
 				04173AEE22155043008C39A7 /* Supporting Files */,
-				04173ADA221547AB008C39A7 /* AppDelegate.swift */,
-				04173ADE221547AB008C39A7 /* Main.storyboard */,
 				04173AE1221547AE008C39A7 /* Assets.xcassets */,
 				04173AE3221547AE008C39A7 /* LaunchScreen.storyboard */,
 				04173AE6221547AE008C39A7 /* Info.plist */,
@@ -105,6 +107,7 @@
 		04173AF422155287008C39A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04173AFA22155E8E008C39A7 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			files = (
 				04173AF9221552D3008C39A7 /* ChannelVC.swift in Sources */,
 				04173AF7221552C3008C39A7 /* ChatVC.swift in Sources */,
+				04173AFB22155E8E008C39A7 /* GradientView.swift in Sources */,
 				04173ADB221547AB008C39A7 /* AppDelegate.swift in Sources */,
 				04173AF222155067008C39A7 /* SWRevealViewController.m in Sources */,
 			);

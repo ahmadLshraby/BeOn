@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYw-BH-QeZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYw-BH-QeZ" customClass="GradientView" customModule="BeOn" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZO-9l-xtv">
@@ -49,9 +49,9 @@
                                         <state key="normal" image="smackBurger"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeOn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-zs-lWs">
-                                        <rect key="frame" x="168.5" y="58.5" width="77.5" height="41"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="167.5" y="58.5" width="79" height="41"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -86,19 +86,73 @@
         <scene sceneID="ZCR-DN-TpA">
             <objects>
                 <viewController id="Xd1-q6-3Sv" customClass="ChannelVC" customModule="BeOn" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="psU-fn-DxJ">
+                    <view key="view" contentMode="scaleToFill" id="psU-fn-DxJ" customClass="GradientView" customModule="BeOn" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeOn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-IR-wCQ">
+                                <rect key="frame" x="20" y="69" width="58" height="31"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-KF-FOv">
+                                <rect key="frame" x="20" y="120" width="62" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06W-Ox-YY9">
+                                <rect key="frame" x="178" y="795.5" width="58" height="43"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xoM-Q7-21v">
+                                <rect key="frame" x="20" y="772" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="5dX-ud-wqa"/>
+                                    <constraint firstAttribute="height" constant="90" id="ouJ-Ml-Xnf"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-sA-qoD">
+                                <rect key="frame" x="0.0" y="161" width="414" height="591"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-vW-aP0">
+                                <rect key="frame" x="312" y="119.5" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xoM-Q7-21v" firstAttribute="leading" secondItem="UZn-tR-xTv" secondAttribute="leading" constant="20" id="77X-hk-bkv"/>
+                            <constraint firstItem="fjB-sA-qoD" firstAttribute="top" secondItem="0AY-KF-FOv" secondAttribute="bottom" constant="20" id="84W-0c-MeF"/>
+                            <constraint firstItem="06W-Ox-YY9" firstAttribute="centerY" secondItem="xoM-Q7-21v" secondAttribute="centerY" id="BMS-Ec-vDY"/>
+                            <constraint firstItem="jmC-vW-aP0" firstAttribute="centerY" secondItem="0AY-KF-FOv" secondAttribute="centerY" id="EqI-PR-dH6"/>
+                            <constraint firstItem="Coc-IR-wCQ" firstAttribute="top" secondItem="UZn-tR-xTv" secondAttribute="top" constant="25" id="GLh-SS-1WH"/>
+                            <constraint firstItem="xoM-Q7-21v" firstAttribute="bottom" secondItem="UZn-tR-xTv" secondAttribute="bottom" id="MBy-KX-JcT"/>
+                            <constraint firstItem="UZn-tR-xTv" firstAttribute="trailing" secondItem="jmC-vW-aP0" secondAttribute="trailing" constant="80" id="OmW-97-V6Q"/>
+                            <constraint firstItem="fjB-sA-qoD" firstAttribute="leading" secondItem="UZn-tR-xTv" secondAttribute="leading" id="SnH-Ay-JQ4"/>
+                            <constraint firstItem="Coc-IR-wCQ" firstAttribute="leading" secondItem="UZn-tR-xTv" secondAttribute="leading" constant="20" id="Teu-3H-yW3"/>
+                            <constraint firstItem="0AY-KF-FOv" firstAttribute="top" secondItem="Coc-IR-wCQ" secondAttribute="bottom" constant="20" id="UvJ-JF-JBr"/>
+                            <constraint firstItem="UZn-tR-xTv" firstAttribute="trailing" secondItem="fjB-sA-qoD" secondAttribute="trailing" id="V0h-Md-6cd"/>
+                            <constraint firstItem="0AY-KF-FOv" firstAttribute="leading" secondItem="UZn-tR-xTv" secondAttribute="leading" constant="20" id="VJz-G1-aDt"/>
+                            <constraint firstItem="06W-Ox-YY9" firstAttribute="centerX" secondItem="psU-fn-DxJ" secondAttribute="centerX" id="i9T-bv-0wG"/>
+                            <constraint firstItem="xoM-Q7-21v" firstAttribute="top" secondItem="fjB-sA-qoD" secondAttribute="bottom" constant="20" id="s1z-xJ-2Rv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UZn-tR-xTv"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I6-jX-bs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944" y="-192"/>
+            <point key="canvasLocation" x="943.47826086956525" y="-192.1875"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
