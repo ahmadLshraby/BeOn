@@ -62,7 +62,19 @@ class AuthService {
             }
         })
     }
-
+    
+    func signOut(completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            self.isLoggedIn = false
+            self.userEmail = ""
+            self.password = ""
+            completion(true, nil)
+        }catch {
+            print(error)
+            completion(false, error)
+        }
+    }
     
     
     
