@@ -13,10 +13,11 @@ class LoginVC: UIViewController {
     // Outlets
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        activityIndicator.isHidden = true
         // Do any additional setup after loading the view.
     }
     @IBAction func closeBtn(_ sender: UIButton) {
@@ -27,11 +28,15 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func logInBtn(_ sender: UIButton) {
+        
+        activityIndicator.isHidden = false
+        
         guard let email = emailTxt.text else { return }
         guard let password = passwordTxt.text else { return }
         AuthService.instance.logIn(email: email, password: password) { (success, error) in
             if success == true && error == nil{
                 print("logged in")
+                self.activityIndicator.isHidden = true
                 self.dismiss(animated: true, completion: nil)
             }
         }

@@ -40,6 +40,7 @@ class AuthService {
     
     
     func register(name: String, email: String, password: String, avatarName: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
+        UserDataService.instance.setUserData(name: name, email: email, avatarName: avatarName)
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil {
                 completion(true, nil)
@@ -53,6 +54,7 @@ class AuthService {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
             if error == nil {
                 self.userEmail = email
+                self.password = password
                 self.isLoggedIn = true
                 completion(true, nil)
             }else {

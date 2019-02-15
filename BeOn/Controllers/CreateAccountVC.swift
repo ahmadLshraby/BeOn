@@ -15,14 +15,15 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var userEmailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // Variables
     var avatarName = "profileDefault"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
+        activityIndicator.isHidden = true
     }
     
     // Update the view from UserDataService after selecting avatar
@@ -41,6 +42,9 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func createAccountBtn(_ sender: UIButton) {
+        
+        activityIndicator.isHidden = false
+        
         guard let email = userEmailTxt.text else { return }
         guard let password = passwordTxt.text else { return }
         guard let name = userNameTxt.text else { return }
@@ -52,6 +56,9 @@ class CreateAccountVC: UIViewController {
                 AuthService.instance.logIn(email: email, password: password, completion: { (success, error) in
                     if success == true && error == nil{
                         print("logged in")
+                        self.activityIndicator.isHidden = true
+                        // send notification to other classes that user had created and change his data to update ChannelVC
+                        NotificationCenter.default.post(name: notifUserDataChanged, object: nil)
                         self.performSegue(withIdentifier: unwindToChannel, sender: nil)
                     }
                 })
@@ -64,8 +71,17 @@ class CreateAccountVC: UIViewController {
         
     }
     
-
-    
+    func setupView() {
+        
+        // Change placeHolder color
+        //        userNameTxt.attributedPlaceholder = NSAttributedString(string: "user name", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9221878648, green: 0.4634322524, blue: 0.001401519286, alpha: 1)])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
     
     
 

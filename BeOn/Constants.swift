@@ -18,3 +18,6 @@ let toAvatarVC = "toAvatarVC"
 let loggedInKey = "loggedIn"
 let USER_EMAIL = "userEmail"
 let pass = "password"
+
+// Notification
+let notifUserDataChanged = Notification.Name("notifUserDataChanged")
