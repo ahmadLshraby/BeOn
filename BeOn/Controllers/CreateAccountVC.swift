@@ -45,9 +45,9 @@ class CreateAccountVC: UIViewController {
         
         activityIndicator.isHidden = false
         
-        guard let email = userEmailTxt.text else { return }
-        guard let password = passwordTxt.text else { return }
-        guard let name = userNameTxt.text else { return }
+        guard let email = userEmailTxt.text, userEmailTxt.text != "" else { return }
+        guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
+        guard let name = userNameTxt.text, userNameTxt.text != "" else { return }
         
 
         AuthService.instance.register(name: name,email: email, password: password, avatarName: avatarName) { (success, error) in

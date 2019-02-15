@@ -297,7 +297,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="stB-IM-Xie">
-                                <rect key="frame" x="188.5" y="329.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="279.5" width="37" height="37"/>
                                 <color key="tintColor" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="color" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -310,7 +310,7 @@
                             <constraint firstItem="7yR-1Z-LTT" firstAttribute="top" secondItem="xoJ-AZ-5jH" secondAttribute="top" constant="60" id="ac3-3X-keS"/>
                             <constraint firstItem="stB-IM-Xie" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="bs0-8f-pb0"/>
                             <constraint firstItem="a9O-ZQ-OxU" firstAttribute="top" secondItem="Z4z-tD-mdQ" secondAttribute="bottom" id="f5k-N5-iAE"/>
-                            <constraint firstItem="stB-IM-Xie" firstAttribute="centerY" secondItem="efh-11-lKU" secondAttribute="centerY" constant="-100" id="hJ7-xc-Lgn"/>
+                            <constraint firstItem="stB-IM-Xie" firstAttribute="centerY" secondItem="efh-11-lKU" secondAttribute="centerY" constant="-150" id="hJ7-xc-Lgn"/>
                             <constraint firstItem="a9O-ZQ-OxU" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="ia1-6c-VxY"/>
                             <constraint firstItem="VFa-td-0Xy" firstAttribute="top" secondItem="7yR-1Z-LTT" secondAttribute="bottom" constant="60" id="mmS-mu-a8m"/>
                             <constraint firstItem="7yR-1Z-LTT" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="pNy-2j-Rt2"/>
@@ -457,7 +457,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i1G-ED-EgG">
-                                <rect key="frame" x="188.5" y="379.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="279.5" width="37" height="37"/>
                                 <color key="tintColor" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="color" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -478,7 +478,7 @@
                             <constraint firstItem="3qI-3X-HZH" firstAttribute="trailing" secondItem="bcX-ro-RPI" secondAttribute="trailing" constant="16" id="Y8E-Qu-JJK"/>
                             <constraint firstItem="6dY-Uc-NAU" firstAttribute="width" secondItem="4Sn-E6-Kce" secondAttribute="width" id="a56-Sa-vMx"/>
                             <constraint firstItem="4Sn-E6-Kce" firstAttribute="centerX" secondItem="mTT-6e-X5H" secondAttribute="centerX" id="idp-mV-kiR"/>
-                            <constraint firstItem="i1G-ED-EgG" firstAttribute="centerY" secondItem="mTT-6e-X5H" secondAttribute="centerY" constant="-50" id="uAc-tw-pSi"/>
+                            <constraint firstItem="i1G-ED-EgG" firstAttribute="centerY" secondItem="mTT-6e-X5H" secondAttribute="centerY" constant="-150" id="uAc-tw-pSi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3qI-3X-HZH"/>
                     </view>

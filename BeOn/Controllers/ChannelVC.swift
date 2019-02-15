@@ -9,7 +9,7 @@
 import UIKit
 
 class ChannelVC: UIViewController {
-
+    
     // Outlets
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImage: CircleImage!
@@ -18,11 +18,19 @@ class ChannelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set the view width
-       self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 70
+        self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 70
         // Add observer to listen to the notification comming
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged), name: notifUserDataChanged, object: nil)
     }
     @objc func userDataChanged() {   // to update UI depending on notification
+        setupUserInfo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserInfo()
+    }
+    
+    func setupUserInfo() {
         if AuthService.instance.isLoggedIn == true {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
@@ -40,14 +48,14 @@ class ChannelVC: UIViewController {
             profile.modalPresentationStyle = .custom
             present(profile, animated: true, completion: nil)
         }else {
-        performSegue(withIdentifier: toLoginVC, sender: nil)
+            performSegue(withIdentifier: toLoginVC, sender: nil)
         }
     }
     
-
-
     
     
     
-
+    
+    
+    
 }

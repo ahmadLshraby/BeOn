@@ -31,11 +31,13 @@ class LoginVC: UIViewController {
         
         activityIndicator.isHidden = false
         
-        guard let email = emailTxt.text else { return }
-        guard let password = passwordTxt.text else { return }
+        guard let email = emailTxt.text, emailTxt.text != "" else { return }
+        guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
+        
         AuthService.instance.logIn(email: email, password: password) { (success, error) in
             if success == true && error == nil{
                 print("logged in")
+                NotificationCenter.default.post(name: notifUserDataChanged, object: nil)
                 self.activityIndicator.isHidden = true
                 self.dismiss(animated: true, completion: nil)
             }
