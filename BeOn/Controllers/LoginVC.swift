@@ -10,6 +10,7 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    // Outlets
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     

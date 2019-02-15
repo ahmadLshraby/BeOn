@@ -10,6 +10,7 @@ import UIKit
 
 class ChatVC: UIViewController {
 
+    // Outlets
     @IBOutlet weak var menuBtn: UIButton!
     
     override func viewDidLoad() {

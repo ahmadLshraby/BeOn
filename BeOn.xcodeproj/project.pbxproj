@@ -23,6 +23,8 @@
 		041C9D172215942000DC6511 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C9D162215941F00DC6511 /* CircleImage.swift */; };
 		041C9D192215944A00DC6511 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041C9D182215944A00DC6511 /* RoundedButton.swift */; };
 		041DA91A22159F3D00DE6D71 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DA91922159F3D00DE6D71 /* UserDataService.swift */; };
+		0499731222162B3100CDF895 /* AvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499731122162B3100CDF895 /* AvatarVC.swift */; };
+		0499731422162E8D00CDF895 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499731322162E8D00CDF895 /* AvatarCell.swift */; };
 		4A97000C90353D89FE067A3E /* Pods_BeOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		041C9D162215941F00DC6511 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		041C9D182215944A00DC6511 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		041DA91922159F3D00DE6D71 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		0499731122162B3100CDF895 /* AvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarVC.swift; sourceTree = "<group>"; };
+		0499731322162E8D00CDF895 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		3C68E1FEC95B433BB6B47DD7 /* Pods-BeOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeOn/Pods-BeOn.debug.xcconfig"; sourceTree = "<group>"; };
 		87CA2BE672F4F1F9A89109F1 /* Pods-BeOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeOn/Pods-BeOn.release.xcconfig"; sourceTree = "<group>"; };
 		BC70491073A18708D0ABBA0C /* Pods_BeOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,7 @@
 				04173AF8221552D3008C39A7 /* ChannelVC.swift */,
 				04173AFE22156D8C008C39A7 /* LoginVC.swift */,
 				04173B0022157156008C39A7 /* CreateAccountVC.swift */,
+				0499731122162B3100CDF895 /* AvatarVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				04173AFA22155E8E008C39A7 /* GradientView.swift */,
 				041C9D162215941F00DC6511 /* CircleImage.swift */,
 				041C9D182215944A00DC6511 /* RoundedButton.swift */,
+				0499731322162E8D00CDF895 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 			files = (
 				04173AF9221552D3008C39A7 /* ChannelVC.swift in Sources */,
 				04173AF7221552C3008C39A7 /* ChatVC.swift in Sources */,
+				0499731422162E8D00CDF895 /* AvatarCell.swift in Sources */,
 				04173B0122157156008C39A7 /* CreateAccountVC.swift in Sources */,
 				04173B0522157BAF008C39A7 /* AuthService.swift in Sources */,
 				04173AFF22156D8C008C39A7 /* LoginVC.swift in Sources */,
@@ -295,6 +302,7 @@
 				041C9D192215944A00DC6511 /* RoundedButton.swift in Sources */,
 				04173ADB221547AB008C39A7 /* AppDelegate.swift in Sources */,
 				04173AF222155067008C39A7 /* SWRevealViewController.m in Sources */,
+				0499731222162B3100CDF895 /* AvatarVC.swift in Sources */,
 				04173AFD2215686B008C39A7 /* Constants.swift in Sources */,
 				041C9D172215942000DC6511 /* CircleImage.swift in Sources */,
 			);
