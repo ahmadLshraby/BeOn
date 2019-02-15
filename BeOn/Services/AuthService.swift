@@ -21,44 +21,12 @@ class AuthService {
             defaults.set(newValue, forKey: loggedInKey)
         }
     }
-    var userEmail: String {
-        get {
-            return defaults.value(forKey: USER_EMAIL) as! String
-        }
-        set {
-            defaults.set(newValue, forKey: USER_EMAIL)
-        }
-    }
-    var password: String {
-        get {
-            return defaults.value(forKey: PASSWORD) as! String
-        }
-        set {
-            defaults.set(newValue, forKey: PASSWORD)
-        }
-    }
-    var name: String {
-        get {
-            return defaults.value(forKey: NAME) as! String
-        }
-        set {
-            defaults.set(newValue, forKey: NAME)
-        }
-    }
-    var avatarName: String {
-        get {
-            return defaults.value(forKey: AVATAR_NAME) as! String
-        }
-        set {
-            defaults.set(newValue, forKey: AVATAR_NAME)
-        }
-    }
-    
-    
+
     func register(name: String, email: String, password: String, avatarName: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
-        UserDataService.instance.setUserData(name: name, email: email, avatarName: avatarName)
+        
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if error == nil {
+                UserDataService.instance.setUserData(name: name, email: email, avatarName: avatarName)
                 // get the id for the created user
                 guard let userId = result?.user.uid else { return }
                 // Create reference from Database
@@ -79,11 +47,24 @@ class AuthService {
     func logIn(email: String, password: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
             if error == nil {
-                self.userEmail = email
-                self.password = password
-                self.name = UserDataService.instance.name
-                self.avatarName = UserDataService.instance.avatarName
-                self.isLoggedIn = true
+                
+                
+                let ref = Database.database().reference()
+                let userID = Auth.auth().currentUser?.uid
+                ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get user value
+                    let value = snapshot.value as? NSDictionary
+                    print(value)
+                    let name = value?["user name"] as? String ?? ""
+                    let avatar = value?["avatar name"] as? String ?? ""
+                    UserDataService.instance.setUserData(name: name, email: email, avatarName: avatar)
+                    // after we get the data from database and set it to app we send notification
+                    NotificationCenter.default.post(name: notifUserDataChanged, object: nil)
+                    print(name, avatar)
+                    
+                })
+
+               self.isLoggedIn = true
                 completion(true, nil)
             }else {
                 completion(false, error)
@@ -92,17 +73,18 @@ class AuthService {
     }
     
     func signOut(completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
+        self.isLoggedIn = false
         do {
             try Auth.auth().signOut()
-            self.isLoggedIn = false
-            self.userEmail = ""
-            self.password = ""
+//            UserDataService.instance.setUserData(name: "", email: "", avatarName: "")
             completion(true, nil)
         }catch {
             print(error)
             completion(false, error)
         }
     }
+    
+
     
 
     

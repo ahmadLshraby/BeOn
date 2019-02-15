@@ -43,13 +43,13 @@ class CreateAccountVC: UIViewController {
     
     @IBAction func createAccountBtn(_ sender: UIButton) {
         
-        activityIndicator.isHidden = false
-        
-        guard let email = userEmailTxt.text, userEmailTxt.text != "" else { return }
-        guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
-        guard let name = userNameTxt.text, userNameTxt.text != "" else { return }
-        
+        guard let email = userEmailTxt.text, let password = passwordTxt.text, let name = userNameTxt.text else { return }
 
+        if email.isEmpty == true || password.isEmpty == true || name.isEmpty == true {
+            self.displayError(errorText: "Please, fill empty fields")
+        }else {
+            activityIndicator.isHidden = false
+            
         AuthService.instance.register(name: name,email: email, password: password, avatarName: avatarName) { (success, error) in
             if success == true  && error == nil{
                 print("registered")
@@ -64,6 +64,14 @@ class CreateAccountVC: UIViewController {
                 })
             }
         }
+    }
+    }
+    // func to display alert for any empty fields , called at validation
+    func displayError(errorText: String) {
+        let alert = UIAlertController(title: "error", message: errorText, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func chooseAvatarBtn(_ sender: UIButton) {

@@ -29,19 +29,33 @@ class LoginVC: UIViewController {
     
     @IBAction func logInBtn(_ sender: UIButton) {
         
-        activityIndicator.isHidden = false
+        guard let email = emailTxt.text, let password = passwordTxt.text else { return }
         
-        guard let email = emailTxt.text, emailTxt.text != "" else { return }
-        guard let password = passwordTxt.text, passwordTxt.text != "" else { return }
-        
+        if email.isEmpty == true || password.isEmpty == true {
+            self.displayError(errorText: "Please, fill empty fields")
+        }else {
+            activityIndicator.isHidden = false
+            
         AuthService.instance.logIn(email: email, password: password) { (success, error) in
             if success == true && error == nil{
                 print("logged in")
-                NotificationCenter.default.post(name: notifUserDataChanged, object: nil)
                 self.activityIndicator.isHidden = true
+//                NotificationCenter.default.post(name: notifUserDataChanged, object: nil)
                 self.dismiss(animated: true, completion: nil)
+            }else {
+                self.activityIndicator.isHidden = true
+                self.displayError(errorText: "Wrong email or password")
             }
         }
+    }
+    }
+    
+    // func to display alert for any empty fields called at validation ,or wrong sign in called at press log in
+    func displayError(errorText: String) {
+        let alert = UIAlertController(title: "error", message: errorText, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     
