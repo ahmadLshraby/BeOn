@@ -29,11 +29,10 @@ class AddChannelVC: UIViewController {
         if name.isEmpty == true || desc.isEmpty == true {
             self.displayError(errorText: "Please, fill empty fields")
         }else {
-            ChannelService.instance.addChannel(name: name) { (success) in
-                if success == true {
-                    
-                }
-            }
+            ChannelService.instance.addChannel(name: name)
+//            ChannelService.instance.observeRoom()
+            self.dismiss(animated: true, completion: nil)
+
     }
 
 }

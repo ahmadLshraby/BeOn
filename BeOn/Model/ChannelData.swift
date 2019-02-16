@@ -9,7 +9,6 @@
 import Foundation
 
 struct ChannelData {
-    
-    public private(set) var channelName: String!
+     public private(set) var channelName = ""
 
 }

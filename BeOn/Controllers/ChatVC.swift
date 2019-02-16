@@ -22,9 +22,8 @@ class ChatVC: UIViewController {
         
         if AuthService.instance.isLoggedIn == true {
             NotificationCenter.default.post(name: notifUserDataChanged, object: nil)
-            ChannelService.instance.observeRoom()
         }
-        
+//        ChannelService.instance.observeRoom()
         
     }
 

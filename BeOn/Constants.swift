@@ -18,6 +18,7 @@ let toAvatarVC = "toAvatarVC"
 let loggedInKey = "loggedIn"
 let USER_EMAIL = "userEmail"
 let PASSWORD = "password"
+let USERID = "userId"
 let NAME = "name"
 let AVATAR_NAME = "avatarName"
 

@@ -56,7 +56,7 @@ class AuthService {
                 self.reference.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
                     // Get user value
                     let value = snapshot.value as? NSDictionary
-                    print(value)
+                    print(value!)
                     let name = value?["user name"] as? String ?? ""
                     let avatar = value?["avatar name"] as? String ?? ""
                     UserDataService.instance.setUserData(name: name, email: email, avatarName: avatar)

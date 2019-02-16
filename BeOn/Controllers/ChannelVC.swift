@@ -9,8 +9,8 @@
 import UIKit
 
 class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     // Outlets
+    @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImage: CircleImage!
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +20,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         // Set the view width
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 70
+        
+        ChannelService.instance.observeRoom()
+
+        
         // Add observer to listen to the notification comming
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged), name: notifUserDataChanged, object: nil)
     }
@@ -29,6 +33,8 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
+        addBtnAppear()
+        self.tableView.reloadData()
     }
     
     func setupUserInfo() {
@@ -59,19 +65,28 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let channel = ChannelService.instance.channels[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
-            let channel = ChannelService.instance.channels[indexPath.row]
             cell.configureCell(channel: channel)
+            
             return cell
         }else {
             return ChannelCell()
         }
+        
     }
     
     @IBAction func addChannel(_ sender: UIButton) {
         let addChannel = AddChannelVC()
         addChannel.modalPresentationStyle = .custom
         present(addChannel, animated: true, completion: nil)
+    }
+    func addBtnAppear() {
+        if AuthService.instance.isLoggedIn == true {
+            addBtn.isEnabled = true
+        }else {
+            addBtn.isEnabled = false
+        }
     }
     
     
