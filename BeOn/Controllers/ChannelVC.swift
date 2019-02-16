@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ChannelVC: UIViewController {
-    
+class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     // Outlets
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var userImage: CircleImage!
+    @IBOutlet weak var tableView: UITableView!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
     override func viewDidLoad() {
@@ -52,6 +53,26 @@ class ChannelVC: UIViewController {
         }
     }
     
+    // Setup table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ChannelService.instance.channels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
+            let channel = ChannelService.instance.channels[indexPath.row]
+            cell.configureCell(channel: channel)
+            return cell
+        }else {
+            return ChannelCell()
+        }
+    }
+    
+    @IBAction func addChannel(_ sender: UIButton) {
+        let addChannel = AddChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
+    }
     
     
     

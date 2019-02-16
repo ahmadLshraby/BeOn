@@ -12,6 +12,9 @@ import Firebase
 class AuthService {
     static let instance = AuthService()
     
+    // Create reference from Database
+    let reference = Database.database().reference()
+    
     let defaults = UserDefaults.standard
     var isLoggedIn: Bool {
         get {
@@ -22,6 +25,7 @@ class AuthService {
         }
     }
 
+
     func register(name: String, email: String, password: String, avatarName: String, completion: @escaping(_ success: Bool, _ error: Error?) -> Void) {
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
@@ -29,10 +33,9 @@ class AuthService {
                 UserDataService.instance.setUserData(name: name, email: email, avatarName: avatarName)
                 // get the id for the created user
                 guard let userId = result?.user.uid else { return }
-                // Create reference from Database
-                let reference = Database.database().reference()
+
                 // Create child in Database
-                let user = reference.child("Users").child(userId)
+                let user = self.reference.child("Users").child(userId)
                 // Create array for the additional data we need to add to Database
                 let addData: [ String: Any] = [ "user name": name, "avatar name": avatarName]
                 // Add that data to the child we created in Database
@@ -49,9 +52,8 @@ class AuthService {
             if error == nil {
                 
                 
-                let ref = Database.database().reference()
                 let userID = Auth.auth().currentUser?.uid
-                ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                self.reference.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
                     // Get user value
                     let value = snapshot.value as? NSDictionary
                     print(value)
@@ -83,6 +85,8 @@ class AuthService {
             completion(false, error)
         }
     }
+
+    
     
 
     

@@ -37,12 +37,23 @@
                                 <action selector="closeBtn:" destination="-1" eventType="touchUpInside" id="dPD-ZS-DcZ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUn-51-J3o">
-                            <rect key="frame" x="123" y="295" width="89" height="47"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUn-51-J3o" customClass="RoundedButton" customModule="BeOn" customModuleProvider="target">
+                            <rect key="frame" x="42.5" y="292" width="250" height="50"/>
+                            <color key="backgroundColor" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gmf-wH-iqJ"/>
+                                <constraint firstAttribute="width" constant="250" id="t8w-T6-3Eo"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                             <state key="normal" title="LogOut">
-                                <color key="titleColor" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="logoutBtn:" destination="-1" eventType="touchUpInside" id="AUN-Ol-alr"/>
                             </connections>
