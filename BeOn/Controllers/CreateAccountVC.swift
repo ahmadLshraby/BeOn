@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateAccountVC: UIViewController {
+class CreateAccountVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     // Outlets
     @IBOutlet weak var userNameTxt: UITextField!
@@ -19,6 +19,7 @@ class CreateAccountVC: UIViewController {
     
     // Variables
     var avatarName = "profileDefault"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,8 @@ class CreateAccountVC: UIViewController {
     @IBAction func closeBtn(_ sender: UIButton) {
         performSegue(withIdentifier: unwindToChannel, sender: nil)
     }
+    
+
     
     @IBAction func createAccountBtn(_ sender: UIButton) {
         

@@ -313,10 +313,19 @@
                                 <color key="tintColor" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="color" red="0.92218786480000003" green="0.46343225240000002" blue="0.0014015192860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-fy-UJK">
+                                <rect key="frame" x="132" y="540" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cV4-1s-tre"/>
+                                    <constraint firstAttribute="height" constant="50" id="xn9-4v-KR3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VFa-td-0Xy" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="AQn-yU-j3V"/>
+                            <constraint firstItem="VWz-fy-UJK" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="K62-FK-rln"/>
                             <constraint firstItem="7WE-SF-ZLo" firstAttribute="top" secondItem="xoJ-AZ-5jH" secondAttribute="top" constant="8" id="QOv-HL-d4t"/>
                             <constraint firstItem="Z4z-tD-mdQ" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="Svu-I9-Kgr"/>
                             <constraint firstItem="7yR-1Z-LTT" firstAttribute="top" secondItem="xoJ-AZ-5jH" secondAttribute="top" constant="60" id="ac3-3X-keS"/>
@@ -326,6 +335,7 @@
                             <constraint firstItem="a9O-ZQ-OxU" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="ia1-6c-VxY"/>
                             <constraint firstItem="VFa-td-0Xy" firstAttribute="top" secondItem="7yR-1Z-LTT" secondAttribute="bottom" constant="60" id="mmS-mu-a8m"/>
                             <constraint firstItem="7yR-1Z-LTT" firstAttribute="centerX" secondItem="efh-11-lKU" secondAttribute="centerX" id="pNy-2j-Rt2"/>
+                            <constraint firstItem="VWz-fy-UJK" firstAttribute="top" secondItem="a9O-ZQ-OxU" secondAttribute="bottom" constant="100" id="q5l-WZ-N2t"/>
                             <constraint firstItem="xoJ-AZ-5jH" firstAttribute="trailing" secondItem="7WE-SF-ZLo" secondAttribute="trailing" constant="16" id="qN8-yO-RVG"/>
                             <constraint firstItem="Z4z-tD-mdQ" firstAttribute="top" secondItem="VFa-td-0Xy" secondAttribute="bottom" constant="50" id="t82-7w-v3l"/>
                         </constraints>
@@ -334,6 +344,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="stB-IM-Xie" id="2fD-7o-gwj"/>
                         <outlet property="emailTxt" destination="pFZ-go-AfS" id="PmP-QJ-G5j"/>
+                        <outlet property="fbLogin" destination="VWz-fy-UJK" id="vSc-Ic-yAp"/>
                         <outlet property="passwordTxt" destination="ZSV-Pk-uuW" id="9FJ-JC-v7D"/>
                         <segue destination="KXu-sR-xYd" kind="show" identifier="toCreateAccount" id="9Ma-NA-gAw"/>
                     </connections>

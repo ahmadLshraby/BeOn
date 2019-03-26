@@ -7,22 +7,39 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, FBSDKLoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        <#code#>
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        <#code#>
+    }
+    
 
     // Outlets
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var fbLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
-        // Do any additional setup after loading the view.
+        
+        let loginButton = FBSDKLoginButton()
+        fbLogin.addSubview(loginButton)
+        loginButton.delegate = self
+        
     }
     @IBAction func closeBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+
+    
     @IBAction func createAccountBtn(_ sender: UIButton) {
         performSegue(withIdentifier: toCreateAccountVC, sender: nil)
     }
